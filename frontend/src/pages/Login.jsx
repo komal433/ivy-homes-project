@@ -24,11 +24,17 @@ export default function Login() {
 
   return (
     <div className="login-page">
+      <div className="login-aside">
+        <div className="eyebrow">THE BETTER WAY HOME</div>
+        <h2>Find a place that feels like yours.</h2>
+        <p>Curated homes, useful signals, and a calmer way to search the city.</p>
+        <div className="login-aside-note"><span>01</span><span>Browse with confidence</span></div>
+      </div>
       <form className="card login-box" onSubmit={handleSubmit}>
         <h1>
           ivy<span style={{ color: "var(--accent)" }}>.homes</span>
         </h1>
-        <p className="sub">Sign in with one of the demo accounts.</p>
+        <p className="sub">Your personal property workspace.</p>
 
         <div className="field">
           <label htmlFor="email">Email</label>

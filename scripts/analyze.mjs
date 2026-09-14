@@ -19,7 +19,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, "..", "data");
 
 // ---- fill this in from the email you got with your key ----
-const ASSIGNED_LOCALITY = "kukatpally";
+const ASSIGNED_LOCALITY = "bellandur";
 // -------------------------------------------------------------
 
 const REFERENCE = new Date("2026-09-10T00:00:00+05:30");

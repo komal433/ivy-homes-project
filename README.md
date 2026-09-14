@@ -5,6 +5,11 @@
 > at the repository root. The live API was swept with the assigned key, and the
 > reviewed answers and evidence are recorded in `submission.json`.
 
+This submission is for the Bangalore-scoped assignment and uses Bellandur as
+the assigned locality for the rental analysis. The collected dataset contains
+4,700 listings, 1,900 rentals, and 520 projects; the API-reported totals are
+lower and are documented as a pagination/completeness discrepancy.
+
 ## What's here
 
 ```
@@ -129,16 +134,16 @@ dataset lies even when every individual API response is well-formed:
 ## What I checked that turned out fine
 
 The assignment explicitly rewards hypotheses that were tested and rejected, not
-just confirmed bugs. The live sweep established that locality, BHK,
-property-type, and sorting behavior worked as expected. It also established that
-furnishing and price-range filters were silently ignored, so the frontend applies
-those filters locally over the complete cache:
+just confirmed bugs. The Bangalore live sweep established that locality, BHK,
+property-type, furnishing, price-range, and sorting requests changed results.
+The frontend still applies every filter locally over the complete cache because
+the API's totals and page metadata are not reliable:
 
 - Does `sort_by`/`order` actually sort, for every documented value, or only
   some?
 - Does `limit` really cap at 200, or accept more?
-- Do `min_price`/`max_price` behave as inclusive, as documented? No: both were
-  accepted but ignored by the service.
+- Do `min_price`/`max_price` behave as inclusive, as documented? The tested
+  boundary requests changed results for the Bangalore key.
 - Does `GET /v1/listings/{id}/similar` actually respect "same locality, same
   bedroom count, price within 15%", or does it drift?
 - Are money and area fields really integers everywhere, as the conventions

@@ -90,8 +90,12 @@ export default function Listings() {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 12 }}>
-        <h2 style={{ margin: 0 }}>Listings</h2>
+      <div className="page-heading">
+        <div>
+          <div className="eyebrow">BROWSE THE CITY</div>
+          <h2>Listings</h2>
+          <p className="page-subtitle">A sharper view of homes worth your attention.</p>
+        </div>
         <span style={{ color: "var(--text-dim)", fontSize: 13 }}>
           {filtered.length} of {listings.length} loaded
           {meta.listingsClaimedTotal !== null && ` (server reports total: ${meta.listingsClaimedTotal})`}

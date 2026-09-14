@@ -29,8 +29,11 @@ function Topbar() {
 
   return (
     <div className="topbar">
-      <div className="brand">
-        ivy<span>.homes</span>
+      <div className="brand-lockup">
+        <div className="brand-mark">i</div>
+        <div className="brand">
+          ivy<span>.homes</span>
+        </div>
       </div>
       <nav>
         <NavLink to="/listings" className={({ isActive }) => (isActive ? "active" : "")}>
@@ -50,7 +53,8 @@ function Topbar() {
         </NavLink>
       </nav>
       <div className="user">
-        <span>{user?.name || user?.email}</span>
+        <span className="user-dot" aria-hidden="true" />
+        <span className="user-name">{user?.name || user?.email}</span>
         <button
           className="secondary"
           onClick={async () => {
@@ -58,7 +62,7 @@ function Topbar() {
             navigate("/login");
           }}
         >
-          Log out
+          <span>Log out</span>
         </button>
       </div>
     </div>

@@ -54,7 +54,13 @@ export default function Insights() {
 
   return (
     <div>
-      <h2>Insights</h2>
+      <div className="page-heading">
+        <div>
+          <div className="eyebrow">THE SIGNAL BEHIND THE SEARCH</div>
+          <h2>Insights</h2>
+          <p className="page-subtitle">A transparent view of the data, its shape, and its edges.</p>
+        </div>
+      </div>
 
       <h3>From /v1/analytics/summary</h3>
       {summaryError ? (

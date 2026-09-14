@@ -4,7 +4,7 @@ import { useAuth } from "./AuthContext";
 
 const DataContext = createContext(null);
 
-const CACHE_KEY = "ivy.dataset.v2";
+const CACHE_KEY = "ivy.dataset.bangalore.v1";
 // Cache is only trusted for this long before we refetch in the background.
 // (You get a fast reload from cache either way — this just controls staleness.)
 const CACHE_TTL_MS = 15 * 60 * 1000;

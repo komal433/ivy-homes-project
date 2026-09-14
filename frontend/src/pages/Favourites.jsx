@@ -10,8 +10,13 @@ export default function Favourites() {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 12 }}>
-        <h2 style={{ margin: 0 }}>Saved listings</h2>
+      <div className="page-heading">
+        <div>
+          <div className="eyebrow">YOUR SHORTLIST</div>
+          <h2>Saved listings</h2>
+          <p className="page-subtitle">The homes worth coming back to.</p>
+        </div>
+        <span className="result-count">{favourites.length} saved</span>
         <button className="secondary" onClick={refresh}>Refresh</button>
       </div>
 

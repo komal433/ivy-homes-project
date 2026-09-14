@@ -37,8 +37,12 @@ export default function Projects() {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 12 }}>
-        <h2 style={{ margin: 0 }}>Projects</h2>
+      <div className="page-heading">
+        <div>
+          <div className="eyebrow">THE CITY, IN PROGRESS</div>
+          <h2>Projects</h2>
+          <p className="page-subtitle">Explore communities before they become addresses.</p>
+        </div>
         <span style={{ color: "var(--text-dim)", fontSize: 13 }}>
           {filtered.length} of {projects.length} loaded
           {meta.projectsClaimedTotal !== null && ` (server reports total: ${meta.projectsClaimedTotal})`}

@@ -38,8 +38,12 @@ export default function Rentals() {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 12 }}>
-        <h2 style={{ margin: 0 }}>Rentals</h2>
+      <div className="page-heading">
+        <div>
+          <div className="eyebrow">FLEXIBLE LIVING</div>
+          <h2>Rentals</h2>
+          <p className="page-subtitle">Monthly homes for the way you live now.</p>
+        </div>
         <span style={{ color: "var(--text-dim)", fontSize: 13 }}>
           {filtered.length} of {rentals.length} loaded
           {meta.rentalsClaimedTotal !== null && ` (server reports total: ${meta.rentalsClaimedTotal})`}
